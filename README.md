@@ -1,6 +1,7 @@
 ﻿# technohacks
  task1
  ![image](https://github.com/sandesh10000/technohacks/assets/85103235/eacc3b1d-e555-477b-9be6-f2a8d9ac35a0)
+ </br>
  task2
  ![image](https://github.com/sandesh10000/technohacks/assets/85103235/e31af83f-f9c2-4008-949f-8f9261c66959)
  task3
