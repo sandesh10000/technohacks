@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .form-item {
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .error {
+    color: red;
+    font-size: 0.8em;
+  }
+  button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4cae4c;
+  }
+</style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+<form id="registrationForm">
+  <div class="form-item">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <div class="error" id="usernameError"></div>
+  </div>
+  <div class="form-item">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <div class="error" id="emailError"></div>
+  </div>
+  <div class="form-item">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <div class="error" id="passwordError"></div>
+  </div>
+  <button type="submit">Register</button>
+</form>
+
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Clear previous error messages
+  document.getElementById('usernameError').textContent = '';
+  document.getElementById('emailError').textContent = '';
+  document.getElementById('passwordError').textContent = '';
+  
+  // Validate inputs
+  var username = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  var isValid = true;
+  
+  // Username validation
+  if (username.length < 3) {
+    document.getElementById('usernameError').textContent = 'Username must be at least 3 characters long.';
+    isValid = false;
+  }
+  
+  // Email validation
+  if (!email.includes('@')) {
+    document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+    isValid = false;
+  }
+  
+  // Password validation
+  if (password.length < 6) {
+    document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+    isValid = false;
+  }
+  
+  // Submit the form if all inputs are valid
+  if (isValid) {
+    // Here you would typically send the data to a server
+    alert('Registration successful!');
+  }
+});
+</script>
+
+</body>
+</html>

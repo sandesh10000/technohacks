@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+  margin: 12px 0px;
+}
+.myinput {
+  width: 50%;
+  margin: 0.6rem 0rem;
+  border: 2px solid aqua;
+  border-radius: 10px;
+  color: #551a8b;
+  outline: none;
+  padding: 0.5rem;
+}
+.myform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  padding: 5px 15px;
+  border: 2px solid #551a8b;
+  border-radius: 8px;
+  color: #551a8b;
+  background-color: aqua;
+  cursor: pointer;
+  margin: 15px;
+}
+.btn:hover {
+  color: white;
+  border: 2px solid black;
+}
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/*navbar*/
+#logo {
+  display: flex;
+  color: white;
+  align-items: center;
+
+  margin-right: 1rem;
+}
+#logo img {
+  height: 3rem;
+  filter: invert(1);
+}
+#logo:hover {
+  color: black;
+}
+
+#navbar {
+  background-color: rgba(0, 229, 255, 0.596);
+  padding: 15px 5px;
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+#navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li {
+  list-style: none;
+}
+#navbar li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 12px 12px;
+  color: rgb(85, 26, 139);
+}
+#navbar li a:hover {
+  color: aliceblue;
+  font-size: x-large;
+}
+/*introsection*/
+#introsection {
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background: center / cover no-repeat url("../static/img/bg1.jpg");
+  position: relative;
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: red;
+}
+#introsection div {
+  font-size: 1.5rem;
+}
+/* missionsection */
+#missionsection {
+  height: 350px;
+  text-align: center;
+  background-color: #de3163;
+}
+#missionsection h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+.cardcont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border: 2px solid black;
+  border-radius: 7px;
+  width: 30%;
+  margin: 1%;
+  height: 230px;
+  display: inline-block;
+  background-color: rgba(234, 208, 251, 0.688);
+}
+.cardbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardbox img {
+  height: 9rem;
+  padding: 1rem 0rem;
+}
+.cartext p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+#missionsection .card h3 {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+/* sponsersection */
+#sponserssection {
+  height: 400px;
+  background-color: rgb(35, 250, 142);
+}
+#sponserssection h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+  text-decoration: underline;
+}
+#sponser {
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.spimage {
+  height: 50%;
+  padding: 0rem 2rem;
+}
+
+/* footer */
+#footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .cardcont {
+    flex-direction: column;
+  }
+  #introsection div {
+    font-size: 1rem;
+  }
+  #missionsection {
+    height: 850px;
+  }
+  .card {
+    width: 50%;
+  }
+  #introsection {
+    font-size: 1.7rem;
+  }
+  #navbar li a {
+    font-size: 1rem;
+  }
+  #sponserssection {
+    height: 400px;
+  }
+  .spimage {
+    padding: 0px;
+    height: 5rem;
+  }
+  #footer {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 275px) and (max-width: 500px) {
+  .cardcont {
+    flex-direction: column;
+  }
+  #introsection div {
+    font-size: 0.8rem;
+  }
+  #missionsection {
+    height: 850px;
+  }
+  .card {
+    width: 80%;
+  }
+  #introsection {
+    font-size: 1rem;
+  }
+  #navbar li a {
+    font-size: 1rem;
+  }
+  #navbar ul {
+    flex-wrap: wrap;
+  }
+  #logo {
+    display: none;
+  }
+  #sponserssection {
+    height: 420px;
+  }
+  .spimage {
+    padding: 0px;
+    height: 5rem;
+  }
+  #footer {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 275px) {
+  .cardcont {
+    flex-direction: column;
+  }
+  #introsection div {
+    font-size: 0.8rem;
+  }
+  #missionsection {
+    height: 850px;
+  }
+  .card {
+    width: 80%;
+  }
+  #introsection {
+    font-size: 1rem;
+  }
+  #navbar li a {
+    font-size: 1rem;
+  }
+  #navbar ul {
+    flex-wrap: wrap;
+  }
+  #logo {
+    display: none;
+  }
+  #sponserssection {
+    height: 550px;
+  }
+  .spimage {
+    padding: 0px;
+    height: 5rem;
+  }
+  #footer {
+    font-size: 0.8rem;
+  }
+  .cardbox img {
+    height: 5rem;
+  }
+  #missionsection .card h3 {
+    font-size: 1rem;
+  }
+  .cartext p {
+    font-size: 0.8rem;
+  }
+}

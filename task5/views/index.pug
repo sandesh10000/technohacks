@@ -1,0 +1,66 @@
+doctype html
+html
+    head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='description', content='Some description')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      title Sandubhai's Dance Academy 
+      style 
+        include ../static/style.css 
+    body 
+      nav#navbar.top 
+        ul
+          div#logo
+              img(src="/static/logo.png")
+              |SDA
+              
+          li #[a(href="/") Home]
+          li #[a(href="/") About]
+          li #[a(href="/") Services]
+          li #[a(href="/") Class Info]
+          li #[a(href="/contact") Contact Us ]
+      section#introsection 
+        | Welcome to Sandubhai's Dance Academy 
+        div.container 
+          div  D-iscipline
+          div  A-ttitude
+          div  N-ew
+          div  C-onfidence 
+          div  E-xpression
+      
+      section#missionsection 
+         h3 Our mission
+         div.cardcont 
+           div.card 
+              h3 Dance Perfection
+              div.cardbox
+                  img(src="/static/img/bg2.png")
+                  div.cartext 
+                     p See the music, hear the dance
+           div.card 
+              h3 Inner Satisfaction
+              div.cardbox
+                  img(src="/static/img/bg3.png")
+                  div.cartext 
+                      p I love dance, it's my first love.
+           div.card 
+              h3 Inspiring Self-confidence
+              div.cardbox
+                  img(src="/static/img/bg4.png")
+                  div.cartext 
+                      p Forget your troubles and dance!
+      
+      section#sponserssection 
+         h3 Our Sponsers
+         div#sponser
+             img(src="/static/img/sp-1.png", alt="sponser image",class="spimage")
+             img(src="/static/img/sp-2.png", alt="sponser image",class="spimage")
+             img(src="/static/img/sp-3.png", alt="sponser image",class="spimage")
+             img(src="/static/img/sp-4.png", alt="sponser image",class="spimage")
+      
+      footer#footer
+        | Copyright © 2022 SandubhaiDanceAcademy.com | All Rights Reserved
+      
+      script 
+        include ../static/index.js

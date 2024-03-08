@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4cae4c;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Currency Converter</h2>
+  <div>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+  </div>
+  <div>
+    <label for="fromCurrency">From:</label>
+    <select id="toCurrency">
+      <option value="USD">US Dollar</option>
+      <option value="EUR">Euro</option>
+      <option value="JPY">Japanese Yen</option>
+      <option value="GBP">British Pound</option>
+      <option value="AUD">Australian Dollar</option>
+      <option value="CAD">Canadian Dollar</option>
+      <option value="CHF">Swiss Franc</option>
+      <option value="CNY">Chinese Yuan</option>
+      <option value="SEK">Swedish Krona</option>
+      <option value="NZD">New Zealand Dollar</option>
+      <!-- Add more currencies as needed -->
+    </select>
+  </div>
+  <div>
+    <label for="toCurrency">To:</label>
+    <select id="fromCurrency">
+      <option value="USD">US Dollar</option>
+      <option value="EUR">Euro</option>
+      <option value="JPY">Japanese Yen</option>
+      <option value="GBP">British Pound</option>
+      <option value="AUD">Australian Dollar</option>
+      <option value="CAD">Canadian Dollar</option>
+      <option value="CHF">Swiss Franc</option>
+      <option value="CNY">Chinese Yuan</option>
+      <option value="SEK">Swedish Krona</option>
+      <option value="NZD">New Zealand Dollar</option>
+      <!-- Add more currencies as needed -->
+    </select>
+  </div>
+  <button id="convert">Convert</button>
+  <div id="result"></div>
+</div>
+
+<script>
+// JavaScript to handle conversion with a base currency
+document.getElementById('convert').addEventListener('click', function() {
+  var amount = document.getElementById('amount').value;
+  var fromCurrency = document.getElementById('fromCurrency').value;
+  var toCurrency = document.getElementById('toCurrency').value;
+  var result = document.getElementById('result');
+
+  // Conversion rates to/from USD
+  var conversionRates = {
+    "USD": {
+      "EUR": 0.91,
+      "JPY": 110.0,
+      "GBP": 0.75,
+      "AUD": 1.4,
+      "CAD": 1.25,
+      "CHF": 0.9,
+      "CNY": 6.5,
+      "SEK": 8.5,
+      "NZD": 1.5
+    },
+    "EUR": 1.18,
+    "JPY": 0.0091,
+    "GBP": 1.33,
+    "AUD": 0.71,
+    "CAD": 0.80,
+    "CHF": 1.11,
+    "CNY": 0.15,
+    "SEK": 0.12,
+    "NZD": 0.67
+  };
+
+  // Convert from original currency to USD
+  var amountInUSD = fromCurrency === 'USD' ? amount : (amount / conversionRates[fromCurrency]).toFixed(2);
+  
+  // Convert from USD to target currency
+  var convertedAmount = toCurrency === 'USD' ? amountInUSD : (amountInUSD * conversionRates[toCurrency]).toFixed(2);
+  
+  result.textContent = `Converted Amount: ${convertedAmount} ${fromCurrency}`;
+});
+</script>
+</body>
+</html>
